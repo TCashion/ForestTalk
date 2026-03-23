@@ -297,8 +297,8 @@ When editing this project:
 
 In order of priority:
 
-1. Scaffold frontend and backend folders
-2. Create FastAPI app with `/health`
+~~1. Scaffold frontend and backend folders~~ COMPLETE
+~~2. Create FastAPI app with `/health`~~ COMPLETE
 3. Create React app shell with Tailwind
 4. Create upload flow from frontend to backend
 5. Stub `POST /predict` with fake response

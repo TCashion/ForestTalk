@@ -1,6 +1,6 @@
 function App() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[radial-gradient(circle_at_top,_rgba(108,163,154,0.18),_transparent_40%),linear-gradient(180deg,_rgba(255,255,255,0.03),_transparent_55%)] px-6 py-16">
+    <main className="flex min-h-screen items-center justify-center px-6 py-16">
       <div className="surface w-full max-w-2xl px-8 py-12 sm:px-10">
         <div className="space-y-4 text-center">
           <p className="text-accent text-sm font-medium uppercase tracking-[0.25em]">
