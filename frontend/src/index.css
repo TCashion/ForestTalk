@@ -2,16 +2,110 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Shared ForestTalk color system */
 :root {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #0f172a;
-  background-color: #f8fafc;
+  --color-bg: #0f1724;
+  --color-panel: #162131;
+  --color-panel-soft: #1b2837;
+  --color-text: #edf2f7;
+  --color-muted: rgba(237, 242, 247, 0.72);
+  --color-accent: #c9d4c1;
+  --color-jade: #6ca39a;
+  --color-jade-dark: #4a706a;
+  --color-border: rgba(197, 211, 227, 0.14);
+  --color-border-strong: rgba(197, 211, 227, 0.22);
+  --color-shadow: 0 24px 60px rgba(5, 10, 18, 0.24);
+  font-family:
+    Inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-  margin: 0;
+@layer base {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    @apply antialiased;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: var(--color-jade);
+  }
 }
 
-* {
-  box-sizing: border-box;
+@layer components {
+  .surface {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 60%),
+      var(--color-panel);
+    border: 1px solid var(--color-border);
+    border-radius: 1.5rem;
+    box-shadow: var(--color-shadow);
+  }
+
+  .surface-soft {
+    background-color: var(--color-panel-soft);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+  }
+
+  .btn-brand {
+    @apply inline-flex items-center justify-center rounded-full px-4 py-2 font-semibold transition;
+    background-color: var(--color-jade-dark);
+    color: var(--color-text);
+    border: 1px solid transparent;
+  }
+
+  .btn-brand:hover,
+  .btn-brand:focus-visible {
+    background-color: var(--color-jade);
+    outline: none;
+    transform: translateY(-1px);
+  }
+}
+
+@layer utilities {
+  .text-muted {
+    color: var(--color-muted);
+  }
+
+  .text-accent {
+    color: var(--color-accent);
+  }
+
+  .bg-panel {
+    background-color: var(--color-panel);
+  }
+
+  .bg-panel-soft {
+    background-color: var(--color-panel-soft);
+  }
+
+  .border-subtle {
+    border-color: var(--color-border);
+  }
+
+  .border-strong {
+    border-color: var(--color-border-strong);
+  }
 }

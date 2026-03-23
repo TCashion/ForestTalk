@@ -210,6 +210,9 @@ Use React + TypeScript + Vite.
 - Use Tailwind CSS
 - Prefer simple, clean, minimal styling
 - Avoid heavy UI libraries unless explicitly requested
+- Reuse the shared ForestTalk color system defined in `frontend/src/index.css`
+- Prefer CSS variables and the existing utility/component classes such as `surface`, `surface-soft`, `text-muted`, and `text-accent`
+- Keep the visual direction calm and nature-inspired: deep blue-green backgrounds, soft panel surfaces, muted text, and jade accents
 
 ### MVP UI Requirements
 
@@ -294,8 +297,8 @@ When editing this project:
 
 In order of priority:
 
-1. Scaffold frontend and backend folders
-2. Create FastAPI app with `/health`
+~~1. Scaffold frontend and backend folders~~ COMPLETE
+~~2. Create FastAPI app with `/health`~~ COMPLETE
 3. Create React app shell with Tailwind
 4. Create upload flow from frontend to backend
 5. Stub `POST /predict` with fake response
