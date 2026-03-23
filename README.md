@@ -26,19 +26,23 @@ ForestTalk/
 ### Frontend
 
 ```bash
+nvm install 20
+nvm use 20
 cd frontend
 npm install
 npm run dev
 ```
 
+ForestTalk's frontend expects a modern Node runtime. If you're using `nvm`, Node 20 is a good stable choice for this project.
+
 ### Backend
 
 ```bash
 cd backend
-python3.11 -m venv .venv
+python -m venv .venv
 source .venv/bin/activate
 pip install -e .
-uvicorn app.main:app --reload
+python -m uvicorn app.main:app --reload
 ```
 
 The frontend starts on Vite's default local port, and the backend exposes a minimal health endpoint at `GET /health`.
