@@ -1,0 +1,18 @@
+[project]
+name = "foresttalk-backend"
+version = "0.1.0"
+description = "Backend API for the ForestTalk MVP."
+readme = "../README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "fastapi>=0.115.5,<1.0.0",
+  "uvicorn[standard]>=0.32.1,<1.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]

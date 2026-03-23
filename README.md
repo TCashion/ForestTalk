@@ -8,3 +8,37 @@ The current target MVP lets a user:
 - run tree detection
 - view an estimated tree count
 - view an annotated image with detected tree crowns
+
+## Repository Structure
+
+```text
+ForestTalk/
+  README.md
+  AGENT.md
+  frontend/
+  backend/
+  docs/
+  scripts/
+```
+
+## Local Development
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Backend
+
+```bash
+cd backend
+python3.11 -m venv .venv
+source .venv/bin/activate
+pip install -e .
+uvicorn app.main:app --reload
+```
+
+The frontend starts on Vite's default local port, and the backend exposes a minimal health endpoint at `GET /health`.
