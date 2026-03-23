@@ -1,17 +1,16 @@
 function App() {
   return (
-    <main className="min-h-screen bg-stone-50 px-6 py-16 text-slate-900">
-      <div className="mx-auto flex max-w-3xl flex-col gap-6 rounded-2xl border border-stone-200 bg-white p-8 shadow-sm">
-        <span className="text-sm font-medium uppercase tracking-[0.2em] text-emerald-700">
-          Tree Detection MVP
-        </span>
-        <div className="space-y-3">
-          <h1 className="text-4xl font-semibold tracking-tight text-slate-950">
+    <main className="flex min-h-screen items-center justify-center bg-gray-100 px-6 py-16 text-slate-900">
+      <div className="w-full max-w-2xl rounded-3xl border border-gray-200 bg-white px-8 py-12 shadow-sm sm:px-10">
+        <div className="space-y-4 text-center">
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-emerald-700">
+            Forest Intelligence
+          </p>
+          <h1 className="text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
             ForestTalk
           </h1>
-          <p className="max-w-2xl text-base leading-7 text-slate-600">
-            A simple web app for detecting and counting trees in aerial imagery
-            with DeepForest.
+          <p className="text-lg leading-8 text-slate-600">
+            Analyze aerial imagery to detect and count trees.
           </p>
         </div>
       </div>
