@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 
-import { uploadImage } from "./lib/api";
+import { getBackendAssetUrl, uploadImage } from "./lib/api";
 import type { PredictionResponse } from "./types/prediction";
 
 function App() {
@@ -100,32 +100,31 @@ function App() {
           {result ? (
             <section className="surface-soft space-y-4 p-6">
               <div className="space-y-1">
-                <h2 className="text-xl font-semibold text-slate-50">
-                  Backend response
-                </h2>
+                <h2 className="text-xl font-semibold text-slate-50">Prediction</h2>
                 <p className="text-muted text-sm">
-                  Placeholder response from `POST /predict`
+                  Real DeepForest tree crown detections from `POST /predict`
                 </p>
               </div>
 
               <dl className="grid gap-4 text-sm text-slate-100 sm:grid-cols-2">
                 <div>
-                  <dt className="text-muted">Filename</dt>
-                  <dd>{result.filename}</dd>
-                </div>
-                <div>
                   <dt className="text-muted">Tree count</dt>
                   <dd>{result.tree_count}</dd>
                 </div>
-                <div className="sm:col-span-2">
-                  <dt className="text-muted">Message</dt>
-                  <dd>{result.message}</dd>
-                </div>
-                <div className="sm:col-span-2">
+                <div>
                   <dt className="text-muted">Detections</dt>
                   <dd>{result.detections.length}</dd>
                 </div>
               </dl>
+
+              <div className="space-y-3">
+                <p className="text-muted text-sm">Annotated image</p>
+                <img
+                  src={getBackendAssetUrl(result.annotated_image_url)}
+                  alt="Annotated tree crown detections"
+                  className="w-full rounded-2xl border border-strong object-cover"
+                />
+              </div>
             </section>
           ) : null}
         </div>

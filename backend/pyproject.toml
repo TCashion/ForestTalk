@@ -5,7 +5,9 @@ description = "Backend API for the ForestTalk MVP."
 readme = "README.md"
 requires-python = ">=3.11,<3.12"
 dependencies = [
+  "deepforest==2.1.0",
   "fastapi>=0.115.5,<1.0.0",
+  "pillow>=10.4.0,<13.0.0",
   "python-multipart>=0.0.20,<1.0.0",
   "uvicorn[standard]>=0.32.1,<1.0.0",
 ]
