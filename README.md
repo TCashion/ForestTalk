@@ -42,7 +42,7 @@ cd backend
 python -m venv .venv
 source .venv/bin/activate
 pip install -e .
-uvicorn app.main:app --reload
+python -m uvicorn app.main:app --reload
 ```
 
 The frontend starts on Vite's default local port, and the backend exposes a minimal health endpoint at `GET /health`.
