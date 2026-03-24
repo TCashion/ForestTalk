@@ -300,8 +300,8 @@ In order of priority:
 ~~1. Scaffold frontend and backend folders~~ COMPLETE
 ~~2. Create FastAPI app with `/health`~~ COMPLETE
 ~~3. Create React app shell with Tailwind~~ COMPLETE
-4. Create upload flow from frontend to backend
-5. Stub `POST /predict` with fake response
+~~4. Create upload flow from frontend to backend~~ COMPLETE
+~~5. Stub `POST /predict` with fake response~~ COMPLETE
 6. Integrate DeepForest prediction
 7. Add annotated image output
 8. Improve UX and error handling
