@@ -208,3 +208,7 @@ __marimo__/
 
 # nvmrc
 .nvmrc
+
+# images
+backend/outputs
+backend/uploads
